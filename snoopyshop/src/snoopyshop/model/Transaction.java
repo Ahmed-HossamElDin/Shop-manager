@@ -10,5 +10,11 @@ package snoopyshop.model;
  * @author Tommy
  */
 public class Transaction {
+    private int id;
+    private String date;
+    private int staffmemberid;
+    private String[] itemids;
+    private String[] itemquantities;
+    private int total;
     
 }
