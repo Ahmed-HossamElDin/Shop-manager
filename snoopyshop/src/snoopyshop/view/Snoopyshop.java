@@ -22,18 +22,18 @@ import javafx.stage.Stage;
  * @author Tommy
  */
 public class Snoopyshop extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader loader= new FXMLLoader(getClass().getResource("loginpage.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root, 600 , 400);
-        
+
         primaryStage.setScene(scene);
-        
-        primaryStage.setTitle("Login");        
-       
+
+        primaryStage.setTitle("Login");
+
         primaryStage.show();
     }
 
@@ -43,5 +43,5 @@ public class Snoopyshop extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

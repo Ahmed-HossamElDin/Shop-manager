@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="303.0" fitWidth="366.0" layoutX="149.0" layoutY="49.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@online-shop.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="55.0" layoutY="106.0" mnemonicParsing="false" text="Create new staff member" textFill="#111010" />
+      <Button layoutX="55.0" layoutY="149.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Delete a staff member" />
+      <Button layoutX="55.0" layoutY="247.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Add a new item" />
+      <Label layoutX="82.0" layoutY="71.0" text="Staff managment">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="223.0" text="Inventory managment">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="55.0" layoutY="316.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Edit an existing item" />
+      <Button layoutX="55.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Delete an existing item" />
+      <Button layoutX="56.0" layoutY="280.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Search for an existing item" />
+      <Label layoutX="406.0" layoutY="70.0" text="Provider managment" textFill="#0e0303">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="396.0" layoutY="149.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" text="Edit a provider" />
+      <Button layoutX="396.0" layoutY="106.0" mnemonicParsing="false" text="Create a  new provider" />
+      <Button layoutX="396.0" layoutY="187.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" text="Delete a provider" />
+      <Label layoutX="393.0" layoutY="223.0" text="Transactions managment" textFill="#1e0707">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="396.0" layoutY="247.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" text="Make a transaction" />
+      <Button layoutX="394.0" layoutY="280.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="Search for a transaction">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Button layoutX="396.0" layoutY="316.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" text="Alter a transaction" />
+      <Button layoutX="55.0" layoutY="187.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Edit a staff member" />
+      <Button layoutX="24.0" layoutY="24.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="73.0" text="← Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
