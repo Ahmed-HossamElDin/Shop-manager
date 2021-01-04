@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package snoopyshop.classes;
+package snoopyshop.model;
 
 /**
  *
  * @author Tommy
  */
-public class Item {
+public class Transaction {
     
 }

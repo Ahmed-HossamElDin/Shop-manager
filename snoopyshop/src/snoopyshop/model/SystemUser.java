@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package snoopyshop.classes;
+package snoopyshop.model;
 
 /**
  *
  * @author Tommy
  */
-public class Transaction {
+public class SystemUser {
+    private int id;
+    private String username;
+    private String password;
+    private String email;
     
 }
