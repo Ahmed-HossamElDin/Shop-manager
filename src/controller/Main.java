@@ -12,24 +12,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("src/view/registration.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view/loginpage.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
-        String[] pathnames;
-
-        File curDir = new File(".");
-        
-        File[] filesList = curDir.listFiles();
-        for(File f : filesList){
-            if(f.isDirectory())
-                System.out.println(f.getName());
-            if(f.isFile()){
-                System.out.println(f.getName());
-            }
-        }
-       }
-
+    }
 
     public static void main(String[] args) {
         launch(args);
