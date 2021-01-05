@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2021 at 04:29 PM
+-- Generation Time: Jan 05, 2021 at 04:57 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -160,8 +160,8 @@ ALTER TABLE `transactions`
 -- Constraints for table `itemsintransaction`
 --
 ALTER TABLE `itemsintransaction`
-  ADD CONSTRAINT `itemid` FOREIGN KEY (`itemid`) REFERENCES `items` (`id`),
-  ADD CONSTRAINT `transactionsid` FOREIGN KEY (`transactionid`) REFERENCES `transactions` (`id`);
+  ADD CONSTRAINT `itemid` FOREIGN KEY (`itemid`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `transactionsid` FOREIGN KEY (`transactionid`) REFERENCES `transactions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
