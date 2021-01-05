@@ -4,13 +4,13 @@ import javafx.event.ActionEvent;
 
 public class admin_managment {
     private Scenes scenes = new Scenes();
-
     public void createnewstaffmember(ActionEvent actionEvent) throws Exception {
         scenes.transition(actionEvent, "/view/creatingnewstaff.fxml", "controller.loginpage", "Create a new staff member");
     }
 
     public void backbtn(ActionEvent actionEvent) throws Exception {
-        scenes.transition(actionEvent, "/view/loginpage.fxml", "controller.admin_managment","Login");
+        scenes.transition(actionEvent, "/view/loginpage.fxml", "controller.admin_managment","Login");loginpage obj = new loginpage() ;
+        System.out.println(obj.state);
     }
 
     public void deletestaff(ActionEvent actionEvent) throws Exception {

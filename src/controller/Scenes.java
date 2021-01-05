@@ -6,9 +6,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 public class Scenes {
-    public void transition(ActionEvent actionEvent, String fxml, String context,String title)throws Exception{
+    public void transition(ActionEvent actionEvent, String fxml, String context, String title) throws Exception{
         Class cl = Class.forName(context);
         Object obj = cl.newInstance();
         Parent root = FXMLLoader.load(obj.getClass().getResource(fxml));
