@@ -17,7 +17,7 @@
             <Font name="Comic Sans MS Bold" size="19.0" />
          </font>
       </Label>
-      <Button layoutX="237.0" layoutY="320.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="127.0" text="Done">
+      <Button layoutX="237.0" layoutY="320.0" mnemonicParsing="false" onAction="#done" prefHeight="41.0" prefWidth="127.0" text="Done">
          <font>
             <Font name="HP Simplified" size="18.0" />
          </font>
@@ -27,24 +27,24 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="14.0" layoutY="129.0" text="Name:">
+      <Label layoutX="17.0" layoutY="164.0" text="Name:">
          <font>
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="88.0" layoutY="129.0" />
-      <Label layoutX="11.0" layoutY="177.0" text="Quantity:">
+      <TextField fx:id="name" layoutX="93.0" layoutY="164.0" />
+      <Label layoutX="8.0" layoutY="210.0" text="Quantity:">
          <font>
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="105.0" layoutY="177.0" prefHeight="26.0" prefWidth="134.0" />
-      <Label layoutX="11.0" layoutY="231.0" text="File:">
+      <TextField fx:id="quantity" layoutX="105.0" layoutY="209.0" prefHeight="26.0" prefWidth="134.0" />
+      <Label layoutX="11.0" layoutY="258.0" text="File:">
          <font>
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="68.0" layoutY="231.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Choose File">
+      <Button layoutX="62.0" layoutY="257.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" text="Choose File">
          <font>
             <Font name="Comic Sans MS Bold" size="12.0" />
          </font>
@@ -54,18 +54,24 @@
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="332.0" layoutY="129.0" />
+      <TextField fx:id="price" layoutX="366.0" layoutY="129.0" />
       <Label layoutX="261.0" layoutY="177.0" text="Description:">
          <font>
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="366.0" layoutY="164.0" prefHeight="82.0" prefWidth="230.0" />
+      <TextField fx:id="description" layoutX="366.0" layoutY="164.0" prefHeight="82.0" prefWidth="230.0" />
       <Label layoutX="261.0" layoutY="258.0" text="Provider's ID:">
          <font>
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="406.0" layoutY="258.0" prefHeight="26.0" prefWidth="134.0" />
+      <TextField fx:id="providerID" layoutX="406.0" layoutY="258.0" prefHeight="26.0" prefWidth="134.0" />
+      <Label layoutX="17.0" layoutY="133.0" text="ID:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ID" layoutX="93.0" layoutY="129.0" />
    </children>
 </AnchorPane>
