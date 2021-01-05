@@ -9,7 +9,10 @@ package model;
  *
  * @author Tommy
  */
-public class Admin {
-    
-    
+public class Admin extends SystemUser {
+
+    public boolean CreateStaffMember(String staffmember_details){return false;}
+    public boolean CreateProvider(String provider_details){return false;}
+
+
 }

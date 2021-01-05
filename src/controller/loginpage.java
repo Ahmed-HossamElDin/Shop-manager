@@ -1,13 +1,12 @@
 package controller;
 
-import Connectivity.ConnectionClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Popup;
+import model.Admin;
+import model.StaffMember;
+import model.SystemUser;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -19,13 +18,13 @@ public class loginpage {
     private TextField username, password;
 
     public void setIsNotAdmin() {
-		this.isAdmin = false;
-	}
-	public void setIsAdmin() {
-		this.isAdmin = true;
+        this.isAdmin = false;
+    }
+    public void setIsAdmin() {
+        this.isAdmin = true;
 
-	}
-	 
+    }
+
     public void AdminLogin(ActionEvent actionEvent) throws Exception {
         scenes.transition(actionEvent, "/view/admin_managment.fxml", "controller.loginpage", "Admin Managment");
     }
@@ -33,38 +32,28 @@ public class loginpage {
         scenes.transition(actionEvent, "/view/staff_managment.fxml", "controller.loginpage", "Staff Managment");
     }
     public Boolean state = isAdmin;
-
+    ActionEvent actionEvent;
     public void Login(ActionEvent actionEvent) throws Exception {
-        ConnectionClass connectionClass=new ConnectionClass();
-        Connection connection=connectionClass.getConnection();
-
+        this.actionEvent=actionEvent;
         if(isAdmin == true)
         {
-            Statement statement=connection.createStatement();
-            String sql = "SELECT username FROM admin WHERE username = '"+username.getText()+"' AND password = '"+password.getText()+"'";
-            ResultSet resultSet=  statement.executeQuery(sql);
-
-            if (resultSet.next())
-            {
-                System.out.println("found");
+            Admin admin = new Admin();
+            String sql = "admin";
+            state = admin.login(username.getText(), password.getText(), this.actionEvent, sql);
+            if (state){
                 AdminLogin(actionEvent);
-            }
-            else
+            }else{
                 System.out.println("not found");
+            }
         }
         else
         {
-            Statement statement=connection.createStatement();
-            String sql = "SELECT username FROM staffmember WHERE username = '"+username.getText()+"' AND password = '"+password.getText()+"'";
-            ResultSet resultSet=  statement.executeQuery(sql);
-
-            if (resultSet.next())
-            {
-                System.out.println("found");
+            StaffMember staff = new StaffMember();
+            String sql = "staffmember";
+            state = staff.login(username.getText(), password.getText(), this.actionEvent, sql);
+            if (state){
                 StaffMemberLogin(actionEvent);
-            }
-            else
-            {
+            }else{
                 System.out.println("not found");
             }
         }
