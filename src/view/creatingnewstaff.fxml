@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.creatingnewstaff">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.creatingnewstaff">
    <children>
       <ImageView fitHeight="303.0" fitWidth="366.0" layoutX="159.0" layoutY="59.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -22,14 +22,14 @@
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="217.0" layoutY="123.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="username" layoutX="217.0" layoutY="123.0" prefHeight="26.0" prefWidth="204.0" />
       <Label layoutX="120.0" layoutY="197.0" text="Password:">
          <font>
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <PasswordField layoutX="217.0" layoutY="197.0" prefHeight="26.0" prefWidth="204.0" />
-      <Button layoutX="247.0" layoutY="293.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="127.0" text="Done">
+      <PasswordField fx:id="password" layoutX="217.0" layoutY="197.0" prefHeight="26.0" prefWidth="204.0" />
+      <Button layoutX="247.0" layoutY="293.0" mnemonicParsing="false" onAction="#RegisterButton" prefHeight="41.0" prefWidth="127.0" text="Done">
          <font>
             <Font name="HP Simplified" size="18.0" />
          </font>
