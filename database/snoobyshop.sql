@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2021 at 04:57 PM
+-- Generation Time: Jan 05, 2021 at 05:15 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `snoobyshop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(10) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -76,10 +89,10 @@ CREATE TABLE `providers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `systemuser`
+-- Table structure for table `staffmember`
 --
 
-CREATE TABLE `systemuser` (
+CREATE TABLE `staffmember` (
   `id` int(10) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL,
@@ -104,6 +117,13 @@ CREATE TABLE `transactions` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
@@ -118,9 +138,9 @@ ALTER TABLE `itemsintransaction`
   ADD KEY `transactionsid` (`transactionid`);
 
 --
--- Indexes for table `systemuser`
+-- Indexes for table `staffmember`
 --
-ALTER TABLE `systemuser`
+ALTER TABLE `staffmember`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
@@ -135,15 +155,21 @@ ALTER TABLE `transactions`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `systemuser`
+-- AUTO_INCREMENT for table `staffmember`
 --
-ALTER TABLE `systemuser`
+ALTER TABLE `staffmember`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
