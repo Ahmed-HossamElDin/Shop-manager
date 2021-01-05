@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Scenes {
-    public void btnAll(ActionEvent actionEvent, String fxml, String context)throws Exception{
+    public void transition(ActionEvent actionEvent, String fxml, String context)throws Exception{
         Class cl = Class.forName(context);
         Object obj = cl.newInstance();
         Parent root = FXMLLoader.load(obj.getClass().getResource(fxml));
