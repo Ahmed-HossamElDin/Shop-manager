@@ -11,6 +11,8 @@ public class viewstaff {
         }
 
 
-    public void done(ActionEvent actionEvent) {
+    public void done(ActionEvent actionEvent) throws Exception {
+        scenes.transition(actionEvent, "/view/editastaffmember.fxml", "controller.creatingnewstaff","Search for staff member");
+
     }
 }
