@@ -1,10 +1,20 @@
 package controller;
 
+import Connectivity.ConnectionClass;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class loginpage {
     private Scenes scenes = new Scenes();
     public static Boolean isAdmin = true;
+
+    @FXML
+    private TextField username, password;
 
     public void setIsNotAdmin() {
 		this.isAdmin = false;
@@ -23,13 +33,36 @@ public class loginpage {
     public Boolean state = isAdmin;
 
     public void Login(ActionEvent actionEvent) throws Exception {
+        ConnectionClass connectionClass=new ConnectionClass();
+        Connection connection=connectionClass.getConnection();
+
         if(isAdmin == true)
         {
-        	AdminLogin(actionEvent);
+            Statement statement=connection.createStatement();
+            String sql = "SELECT username FROM admin WHERE username = '"+username.getText()+"' AND password = '"+password.getText()+"'";
+            ResultSet resultSet=  statement.executeQuery(sql);
+
+            if (resultSet.next())
+            {
+                System.out.println("found");
+                AdminLogin(actionEvent);
+            }
+            else
+                System.out.println("not found");
         }
         else
         {
-        	StaffMemberLogin(actionEvent);
+            Statement statement=connection.createStatement();
+            String sql = "SELECT username FROM staffmember WHERE username = '"+username.getText()+"' AND password = '"+password.getText()+"'";
+            ResultSet resultSet=  statement.executeQuery(sql);
+
+            if (resultSet.next())
+            {
+                System.out.println("found");
+                StaffMemberLogin(actionEvent);
+            }
+            else
+                System.out.println("not found");
         }  	
     }
 
