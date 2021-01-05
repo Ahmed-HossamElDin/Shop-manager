@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2021 at 05:15 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Jan 05, 2021 at 09:35 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `snoobyshop`
+-- Database: `snoopyshop`
 --
 
 -- --------------------------------------------------------
@@ -29,11 +28,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `id` int(10) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`, `email`) VALUES
+('Ahmed', '123', 'aaa');
 
 -- --------------------------------------------------------
 
@@ -93,11 +98,36 @@ CREATE TABLE `providers` (
 --
 
 CREATE TABLE `staffmember` (
-  `id` int(10) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `staffmember`
+--
+
+INSERT INTO `staffmember` (`username`, `password`, `email`) VALUES
+('3abdoo', 'fhse5', 'nek'),
+('ahmed', 'a@g.com', 'ahmeddd');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `test`
+--
+
+CREATE TABLE `test` (
+  `name` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `test`
+--
+
+INSERT INTO `test` (`name`) VALUES
+('fsd'),
+('g');
 
 -- --------------------------------------------------------
 
@@ -107,7 +137,7 @@ CREATE TABLE `staffmember` (
 
 CREATE TABLE `transactions` (
   `id` int(10) NOT NULL,
-  `date` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  `date` timestamp(6) NOT NULL DEFAULT current_timestamp(6),
   `staffmemberid` int(10) NOT NULL,
   `total` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -120,7 +150,6 @@ CREATE TABLE `transactions` (
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
@@ -141,7 +170,6 @@ ALTER TABLE `itemsintransaction`
 -- Indexes for table `staffmember`
 --
 ALTER TABLE `staffmember`
-  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
@@ -155,21 +183,9 @@ ALTER TABLE `transactions`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `staffmember`
---
-ALTER TABLE `staffmember`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
