@@ -149,7 +149,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -157,7 +157,11 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\SnoopyShop\src\view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\SnoopyShop\src\view" />
       <recent name="D:\Programming\SnoopyShop\src\controller" />
       <recent name="C:\Users\A.YEHYA\IdeaProjects\SoftwareProject1.1\lib" />
       <recent name="C:\Users\A.YEHYA\IdeaProjects\SoftwareProject1.1\src\sample" />

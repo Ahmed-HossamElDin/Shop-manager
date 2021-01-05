@@ -2,8 +2,7 @@ package controller;
 
 import javafx.event.ActionEvent;
 
-public class creatingnewstaff {
-    private Scenes scenes = new Scenes();
+public class editprovider {private Scenes scenes = new Scenes();
 
     public void backbtn(ActionEvent actionEvent) throws Exception{
         scenes.transition(actionEvent, "/view/admin_managment.fxml", "controller.creatingnewstaff","Admin Managment`");
