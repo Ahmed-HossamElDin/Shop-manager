@@ -21,7 +21,7 @@ public class creatingnewstaff {
 
 
     @FXML
-    private TextField username, password;
+    private TextField username, email, password;
 
 
     @FXML
@@ -30,7 +30,7 @@ public class creatingnewstaff {
         ConnectionClass connectionClass=new ConnectionClass();
         Connection connection=connectionClass.getConnection();
 
-        String sql = "INSERT INTO test VALUES('"+username.getText()+"')";
+        String sql = "INSERT INTO staffmember " + "VALUES ('"+username.getText()+"', '"+email.getText()+"', '"+password.getText()+"')";
         Statement statement = connection.createStatement();
         statement.executeUpdate(sql);
 
