@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.deletestaff">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.deletestaff">
    <children>
       <ImageView fitHeight="303.0" fitWidth="366.0" layoutX="159.0" layoutY="59.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -17,18 +17,18 @@
             <Font name="Comic Sans MS Bold" size="19.0" />
          </font>
       </Label>
-      <Label layoutX="187.0" layoutY="159.0" text="ID:">
+      <Label layoutX="134.0" layoutY="160.0" text="Username:">
          <font>
             <Font name="Comic Sans MS Bold" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="233.0" layoutY="159.0" prefHeight="26.0" prefWidth="204.0" />
+      <TextField fx:id="username" layoutX="233.0" layoutY="159.0" prefHeight="26.0" prefWidth="204.0" />
       <CheckBox layoutX="143.0" layoutY="232.0" mnemonicParsing="false" text="I am aware that this member will be deleted from the database">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </CheckBox>
-      <Button layoutX="247.0" layoutY="320.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="127.0" text="Done">
+      <Button layoutX="247.0" layoutY="320.0" mnemonicParsing="false" onAction="#done" prefHeight="41.0" prefWidth="127.0" text="Done">
          <font>
             <Font name="HP Simplified" size="18.0" />
          </font>

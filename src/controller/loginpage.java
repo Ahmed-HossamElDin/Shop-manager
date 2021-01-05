@@ -3,7 +3,9 @@ package controller;
 import Connectivity.ConnectionClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Popup;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -62,8 +64,10 @@ public class loginpage {
                 StaffMemberLogin(actionEvent);
             }
             else
+            {
                 System.out.println("not found");
-        }  	
+            }
+        }
     }
 
 }
