@@ -17,7 +17,7 @@ public class loginpage {
         scenes.transition(actionEvent, "/view/admin_managment.fxml", "controller.loginpage", "Admin Managment");
     }
     public void StaffMemberLogin(ActionEvent actionEvent) throws Exception {
-        scenes.transition(actionEvent, "/view/cart.fxml", "controller.loginpage", "Staff Managment");
+        scenes.transition(actionEvent, "/view/staff_managment.fxml", "controller.loginpage", "Staff Managment");
     }
     public void Login(ActionEvent actionEvent) throws Exception {
         if(isAdmin == true)
