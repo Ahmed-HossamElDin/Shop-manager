@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sample;
+package model;
 
 /**
  *
  * @author Tommy
  */
-public class Customer {
+public class Provider {
     private String name;
     private String phonenumber;
     private String email;

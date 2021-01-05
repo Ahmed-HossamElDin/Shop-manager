@@ -1,4 +1,4 @@
-package sample;
+package controller;
 
 //STEP 1. Import required packages
 import java.sql.*;
