@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SoftwareProject1.1.iml" filepath="$PROJECT_DIR$/SoftwareProject1.1.iml" />
+      <module fileurl="file://$PATH_TO_FX$/lib.iml" filepath="$PATH_TO_FX$/lib.iml" />
     </modules>
   </component>
 </project>

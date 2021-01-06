@@ -7,8 +7,6 @@ import java.sql.SQLException;
 public class ConnectionClass {
     public Connection connection;
     public  Connection getConnection(){
-
-
         String dbName="snoopyshop";
         String userName="root";
         String password="";
@@ -17,13 +15,9 @@ public class ConnectionClass {
             Class.forName("com.mysql.jdbc.Driver");
 
             connection= DriverManager.getConnection("jdbc:mysql://localhost/"+dbName,userName,password);
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
         return connection;
     }
 

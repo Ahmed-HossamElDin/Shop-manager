@@ -30,9 +30,9 @@ public class SystemUser {
     private String email;
 
     public boolean login(String username, String password, ActionEvent actionEvent,String sql) throws SQLException {
-        ConnectionClass connectionClass=new ConnectionClass();
-        Connection connection=connectionClass.getConnection();
-        Statement statement=connection.createStatement();
+        ConnectionClass connectionClass = new ConnectionClass();
+        Connection connection = connectionClass.getConnection();
+        Statement statement = connection.createStatement();
         this.username = username;
         this.password = password;
         sql = "SElECT username FROM "+sql+" WHERE username = '"+username+"' AND password = '"+password+"'";
