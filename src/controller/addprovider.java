@@ -18,7 +18,7 @@ public class addprovider {private Scenes scenes = new Scenes();
 
 
     @FXML
-    private TextField id, name, phone;
+    private TextField name, phone, email;
 
 
     @FXML
@@ -26,7 +26,7 @@ public class addprovider {private Scenes scenes = new Scenes();
 
         ConnectionClass connectionClass=new ConnectionClass();
         Connection connection=connectionClass.getConnection();
-        String sql = "INSERT INTO providers " + "VALUES ("+id.getText()+", '"+name.getText()+"', '"+phone.getText()+"')";
+        String sql = "INSERT INTO providers " + "VALUES ("+name.getText()+", '"+phone.getText()+"', '"+email.getText()+"')";
         Statement statement = connection.createStatement();
         statement.executeUpdate(sql);
 

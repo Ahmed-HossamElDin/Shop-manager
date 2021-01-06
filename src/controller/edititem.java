@@ -1,11 +1,14 @@
 package controller;
 
 import Connectivity.ConnectionClass;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -21,6 +24,28 @@ public class edititem {
             scenes.transition(actionEvent, "/view/staff_managment.fxml", "controller.edititem","Staff Managment");
         }
     }
+    }
+    @FXML
+    private JFXComboBox items;
+    private JFXButton fill;
+
+    @FXML
+    public void FillComboBox(){
+        try{
+            ConnectionClass connectionClass=new ConnectionClass();
+            Connection connection=connectionClass.getConnection();
+            Statement statement=connection.createStatement();
+            String sql = "SElECT * FROM items";
+            ResultSet resultSet=  statement.executeQuery(sql);
+            while(resultSet.next()){
+                String name = resultSet.getString("name");
+                items.getItems().add(name);
+            }
+            fill.setVisible(false);
+        }
+        catch(Exception e){
+
+        }
     }
     @FXML
     private TextField id, name, quantity, providerID;

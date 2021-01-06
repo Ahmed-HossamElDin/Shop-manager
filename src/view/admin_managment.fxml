@@ -1,54 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admin_managment">
    <children>
-      <ImageView fitHeight="303.0" fitWidth="366.0" layoutX="149.0" layoutY="49.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@online-shop.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="55.0" layoutY="106.0" mnemonicParsing="false" onAction="#createnewstaffmember" prefHeight="26.0" prefWidth="192.0" text="Create new staff member" textFill="#111010" />
-      <Button layoutX="55.0" layoutY="149.0" mnemonicParsing="false" onAction="#deletestaff" prefHeight="26.0" prefWidth="192.0" text="Delete a staff member" />
-      <Button layoutX="55.0" layoutY="247.0" mnemonicParsing="false" onAction="#additem" prefHeight="26.0" prefWidth="198.0" text="Add a new item" />
-      <Label layoutX="95.0" layoutY="77.0" text="Staff managment">
+      <Label layoutX="95.0" layoutY="77.0" style="-fx-font-family: Open Sans;" text="Staff managment">
          <font>
             <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="77.0" layoutY="219.0" prefHeight="26.0" prefWidth="148.0" text="Inventory managment">
+      <Label layoutX="77.0" layoutY="219.0" prefHeight="26.0" prefWidth="148.0" style="-fx-font-family: Open Sans;" text="Inventory managment">
          <font>
             <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="55.0" layoutY="316.0" mnemonicParsing="false" onAction="#edititem" prefHeight="26.0" prefWidth="198.0" text="Edit an existing item" />
-      <Button layoutX="55.0" layoutY="352.0" mnemonicParsing="false" onAction="#deleteitem" prefHeight="26.0" prefWidth="198.0" text="Delete an existing item" />
-      <Button layoutX="55.0" layoutY="280.0" mnemonicParsing="false" onAction="#searchitem" prefHeight="26.0" prefWidth="198.0" text="Search for an existing item" />
-      <Label layoutX="422.0" layoutY="77.0" text="Provider managment" textFill="#0e0303">
+      <Label layoutX="422.0" layoutY="77.0" style="-fx-font-family: Open Sans;" text="Provider managment" textFill="#0e0303">
          <font>
             <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="396.0" layoutY="149.0" mnemonicParsing="false" onAction="#editprovider" prefHeight="26.0" prefWidth="192.0" text="Edit a provider" />
-      <Button layoutX="397.0" layoutY="106.0" mnemonicParsing="false" onAction="#createprovider" prefHeight="26.0" prefWidth="192.0" text="Create a  new provider" />
-      <Button layoutX="396.0" layoutY="187.0" mnemonicParsing="false" onAction="#deleteprovider" prefHeight="26.0" prefWidth="192.0" text="Delete a provider" />
-      <Label layoutX="406.0" layoutY="221.0" prefHeight="22.0" prefWidth="166.0" text="Transactions managment" textFill="#1e0707">
+      <Label layoutX="406.0" layoutY="221.0" prefHeight="22.0" prefWidth="166.0" style="-fx-font: Open Sans;" text="Transactions managment" textFill="#1e0707">
          <font>
             <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="396.0" layoutY="247.0" mnemonicParsing="false" onAction="#maketransaction" prefHeight="26.0" prefWidth="192.0" text="Make a transaction" />
-      <Button layoutX="394.0" layoutY="280.0" mnemonicParsing="false" onAction="#searchtransaction" prefHeight="26.0" prefWidth="192.0" text="Search for a transaction" />
-      <Button layoutX="396.0" layoutY="316.0" mnemonicParsing="false" onAction="#altertransaction" prefHeight="26.0" prefWidth="192.0" text="Alter a transaction" />
-      <Button layoutX="55.0" layoutY="187.0" mnemonicParsing="false" onAction="#editstaff" prefHeight="26.0" prefWidth="192.0" text="Edit a staff member" />
-      <Button layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#backbtn" prefHeight="27.0" prefWidth="73.0" text="← Back">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
+      <JFXButton layoutX="31.0" layoutY="27.0" onAction="#backbtn" style="-fx-background-color: #F2413A;" text="← Back" textFill="#f2f1f1" />
+      <JFXButton layoutX="80.0" layoutY="106.0" onAction="#createnewstaffmember" style="-fx-background-color: #2196F3;" text="Create new staff member" textFill="WHITE" />
+      <JFXButton layoutX="421.0" layoutY="106.0" onAction="#createprovider" style="-fx-background-color: #2294F2;" text="Create a  new provider" textFill="#fdfcfc" />
+      <JFXButton layoutX="87.0" layoutY="150.0" onAction="#deletestaff" style="-fx-background-color: #2196F3;" text="Delete a staff member" textFill="#fdfcfc" />
+      <JFXButton layoutX="442.0" layoutY="150.0" onAction="#editprovider" style="-fx-background-color: #2294F2;" text="Edit a provider" textFill="#fdfcfc" />
+      <JFXButton layoutX="91.0" layoutY="188.0" onAction="#editstaff" style="-fx-background-color: #2196F3;" text="Edit a staff member" textFill="#fdfcfc" />
+      <JFXButton layoutX="435.0" layoutY="187.0" onAction="#deleteprovider" style="-fx-background-color: #2294F2;" text="Delete a provider" textFill="#fdfcfc" />
+      <JFXButton layoutX="101.0" layoutY="248.0" onAction="#additem" style="-fx-background-color: #1481DB;" text="Add a new item" textFill="#faf9f9" />
+      <JFXButton layoutX="431.0" layoutY="248.0" onAction="#maketransaction" style="-fx-background-color: #1481DB;" text="Make a transaction" textFill="#fdfcfc" />
+      <JFXButton layoutX="77.0" layoutY="280.0" onAction="#searchitem" style="-fx-background-color: #1481DB;" text="Search for an existing item" textFill="#f8f1f1" />
+      <JFXButton layoutX="418.0" layoutY="280.0" onAction="#searchtransaction" style="-fx-background-color: #1481DB;" text="Search for a transaction" textFill="#fdfcfc" />
+      <JFXButton layoutX="93.0" layoutY="316.0" onAction="#edititem" style="-fx-background-color: #1481DB;" text="Edit an existing item" textFill="#fdfcfc" />
+      <JFXButton layoutX="432.0" layoutY="316.0" onAction="#altertransaction" style="-fx-background-color: #1481DB;" text="Alter a transaction" textFill="#fdfcfc" />
+      <JFXButton layoutX="86.0" layoutY="351.0" onAction="#deleteitem" style="-fx-background-color: #1481DB;" text="Delete an existing item" textFill="#fdfcfc" />
    </children>
 </AnchorPane>
